@@ -68,7 +68,7 @@ How to use
 The tool is provided with quick help that shows you the required argument as follows:
 
 ```
-python modmobmap.py -h
+python3 modmobmap.py -h
 usage: modmobmap.py [-h] [-m MODULE] [-n NETWORKS] [-o] [-s ANDROIDSDK]
                     [-a ATMODE] [-f FILE]Before running the engine, make sure all dependencies are installed. You can refer to the installation script 
 
@@ -94,7 +94,7 @@ optional arguments:
 Assuming the Android SDK is installed in */opt/Android*, the tool can be quickly started as follows:
 
 ```
-$ sudo python modmobmap.py
+$ sudo python3 modmobmap.py
 => Requesting a list of MCC/MNC. Please wait, it may take a while...
 Found 2 operator(s)
 {u'20810': u'F SFR', u'20820': u'F-Bouygues Telecom'} 
@@ -146,7 +146,7 @@ When looking for operators, an AT command is sent to the modem. If you want to s
 Only the MCC/MNC codes are important. Then you can re-launch the tool as follows:
 
 ```
-$ sudo python modmobmap.py -o   
+$ sudo python3 modmobmap.py -o   
 => Requesting a list of MCC/MNC. Please wait, it may take a while...
 Found 4 operators in cache, you choose to reuse them.
 Found 4 operator(s)
@@ -193,7 +193,7 @@ Focusing some operators
 It is possible to tell *Modmobmap* to focus only on specific operators with the *-m* argument:
 
 ```
-$ sudo python modmobmap.py -n 20801
+$ sudo python3 modmobmap.py -n 20801
 => Manual MCC/MNC processing...
 Found 1 operator(s)
 {'20801': '20801'} 
@@ -285,7 +285,7 @@ Modmodmap can be used with `gr-gsm` to retrieve GSM cells' information with a So
 To use this feature, please issue the following command:
 
 ```
-$ python modmobmap.py -m grgsm -b GSM-R,GSM900 -g rtlsdr
+$ python3 modmobmap.py -m grgsm -b GSM-R,GSM900 -g rtlsdr
 => Switching to GSM-R band
 [+] New cell detected [CellID/PCI-DL_freq  (****)]
  Network type=2G
@@ -410,7 +410,7 @@ Found device 1
 For NB-IoT scanning, you can use the `srslte_npss` option as follows:
 
 ```
-$ sudo python modmobmap.py -m srslte_npss -b 20 -g 'soapy:id=1' # you need to precise the driver, and id of the device that way  
+$ sudo python3 modmobmap.py -m srslte_npss -b 20 -g 'soapy:id=1' # you need to precise the driver, and id of the device that way  
 [INFO] [UHD] linux; GNU C++ version 9.2.1 20191008; Boost_106700; UHD_4.0.0.0-531-g5fb585c3
 [INFO] [LOGGING] Fastpath logging disabled at runtime.
 

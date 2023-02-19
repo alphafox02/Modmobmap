@@ -53,9 +53,9 @@ libsndfile-dev libtalloc-dev libpcsclite-dev wget unzip python3-pip
 # cd ..
 
 # echo "[+] Installing gr-osmosdr from source"
-# mkdir thirdparty
-# cd thirdparty
-# REMPATH=`pwd`
+mkdir thirdparty
+cd thirdparty
+REMPATH=`pwd`
 # #sudo apt install gr-osmosdr
 # git clone https://github.com/osmocom/gr-osmosdr
 # cd gr-osmosdr
